@@ -16,6 +16,9 @@ GDM_CONFIG=/etc/gdm/custom.conf
 
 # Configure gdm autologin.
 
-if [ -f $GDM_CONFIG ]; then
-    sed -i s/"daemon]$"/"daemon]\nAutomaticLoginEnable=true\nAutomaticLogin=vagrant"/ /etc/gdm/custom.conf
-fi
+#if [ -f $GDM_CONFIG ]; then
+#    sed -i s/"daemon]$"/"daemon]\nAutomaticLoginEnable=true\nAutomaticLogin=vagrant"/ /etc/gdm/custom.conf
+#fi
+
+rm -f /etc/xdg/autostart/org.gnome.SettingsDaemon.ScreensaverProxy.desktop
+rm -f /etc/xdg/autostart/gnome-initial-setup-first-login.desktop
